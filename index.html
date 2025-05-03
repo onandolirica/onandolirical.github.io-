@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>Guía Avanzada de Supervivencia en Conflictos Bélicos</title>
+    <meta name="description" content="Guía completa de supervivencia en conflictos armados con información histórica, tácticas actualizadas y recursos estratégicos">
+    <meta name="keywords" content="supervivencia bélica, guerra, táctica militar, preparación emergencias, seguridad personal">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* Sistema de diseño mejorado */
+        :root {
+            --primary: #1a1a2e;
+            --primary-light: #16213e;
+            --secondary: #e94560;
+            --accent: #0f3460;
+            --light: #f1f1f1;
+            --dark: #0d0d1a;
+            --safe: #2ecc71;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --radius: 8px;
+            --shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --header-image: url('https://images.unsplash.com/photo-1581453904507-626ddb717f14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--light);
+            background-color: var(--dark);
+            background-image: linear-gradient(to bottom, var(--primary), var(--dark));
+            min-height: 100vh;
+        }
+
+        /* Tipografía mejorada */
+        h1, h2, h3, h4 {
+            font-family: 'Tahoma', 'Arial Narrow', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.75rem; }
+        h4 { font-size: 1.5rem; }
+
+        p {
+            margin-bottom: 1.25rem;
+        }
+
+        /* Layout mejorado */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header premium */
+        header {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+                        var(--header-image) center/cover no-repeat;
+            color: white;
+            padding: 6rem 1rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 2rem;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: var(--dark);
+            clip-path: polygon(0 0, 100% 0, 100% 20%, 0 100%);
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .header-content h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1.5rem;
+        }
+
+        .header-content p {
+            font-size: 1.25rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Navegación premium */
+        nav {
+            background: rgba(26, 26, 46, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        #nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        #nav-menu li {
+            margin: 0 0.5rem;
+        }
+
+        #nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        #nav-menu a:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        /* Menú móvil mejorado */
+        #mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        /* Secciones mejoradas */
+        section {
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        section:nth-child(even) {
+            background: rgba(15, 52, 96, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        /* Cards premium */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .card-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        /* Galería de conflictos mejorada */
+        .conflict-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .conflict-card .card-image {
+            height: 180px;
+        }
+
+        .conflict-card .card-content {
+            padding: 1.5rem;
+        }
+
+        .conflict-card .card-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Línea de tiempo mejorada */
+        .timeline-container {
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .timeline {
+            position: relative;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            margin: 2rem 0;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: transform 2s ease-out;
+            border-radius: 4px;
+        }
+
+        .timeline.animated::after {
+            transform: scaleX(1);
+        }
+
+        .timeline-marker {
+            position: absolute;
+            top: -12px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            cursor: pointer;
+            transform: translateX(-50%);
+            z-index: 2;
+            border: 4px solid var(--dark);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .timeline-marker:hover {
+            transform: translateX(-50%) scale(1.2);
+            background: var(--secondary);
+        }
+
+        .timeline-years {
+            display: flex;
+            justify-content: space-between;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Mapas mejorados */
+        .map-container {
+            height: 500px;
+            border-radius: var(--radius);
+            margin-top: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .map-legend {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            flex-wrap: wrap;
+        }
+
+        .legend-icon {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .legend-icon::before {
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+        }
+
+        .legend-icon.safe::before {
+            background: var(--safe);
+        }
+
+        .legend-icon.hospital::before {
+            background: var(--accent);
+        }
+
+        .legend-icon.danger::before {
+            background: var(--danger);
+        }
+
+        /* Tabs mejorados */
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .tab-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: none;
+            border-radius: var(--radius) var(--radius) 0 0;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .tab-btn.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Modal mejorado */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: var(--primary-light);
+            margin: 2rem auto;
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            max-width: 900px;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.show .modal-content {
+            transform: translateY(0);
+        }
+
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.6);
+            transition: var(--transition);
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .close:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .modal-details {
+            margin-top: 2rem;
+        }
+
+        .modal-details h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .modal-sources {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-sources h4 {
+            margin-bottom: 1rem;
+        }
+
+        /* Footer mejorado */
+        footer {
+            background: var(--primary);
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+            position: relative;
+            clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+            opacity: 0.3;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin: 0.75rem 0;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            position: relative;
+            z-index: 1;
+        }
+
+        .copyright a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .copyright a:hover {
+            color: var(--secondary);
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 0.5rem;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilos para favoritos */
+        .conflict-card.favorite {
+            border: 2px solid var(--secondary);
+            box-shadow: 0 0 15px rgba(233, 69, 96, 0.3);
+        }
+
+        .favorite-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            border: none;
+            color: white;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 2;
+            transition: var(--transition);
+        }
+
+        .favorite-btn:hover, .favorite-btn.active {
+            color: var(--secondary);
+        }
+
+        .favorite-btn i {
+            font-size: 1.2rem;
+        }
+
+        /* Modal grande para términos y privacidad */
+        .modal-content.large {
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        /* No results */
+        .no-results {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 2rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Loading spinner */
+        .loading-spinner {
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Badge para tarjetas */
+        .card-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--radius);
+            font-size: 0.75rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        /* Botón de favorito en modal */
+        .modal-content .favorite-btn {
+            position: static;
+            display: inline-flex;
+            gap: 0.5rem;
+            width: auto;
+            height: auto;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            margin-top: 1rem;
+        }
+
+        /* Mejoras para móviles */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            header {
+                padding: 4rem 1rem;
+            }
+            
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #mobile-menu-btn {
+                display: block;
+            }
+            
+            #nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background: var(--primary);
+                flex-direction: column;
+                padding: 6rem 2rem 2rem;
+                transition: var(--transition);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+            }
+            
+            #nav-menu.active {
+                right: 0;
+            }
+            
+            #nav-menu li {
+                margin: 0.5rem 0;
+            }
+            
+            .conflict-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                padding: 1.5rem;
+            }
+
+            .modal-content.large {
+                width: 90%;
+            }
+            
+            .favorite-btn {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            .modal-subtitle {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            header {
+                padding: 3rem 1rem;
+                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+            }
+            
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+            
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .tab-btn {
+                border-radius: var(--radius);
+            }
+
+            .map-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera premium -->
+    <header>
+        <div class="header-content container">
+            <h1>Guía Avanzada de Supervivencia Bélica</h1>
+            <p>Tácticas, estrategias y recursos basados en conflictos históricos y modernos</p>
+            <p class="last-update">Actualizado: <span id="current-date"></span></p>
+        </div>
+    </header>
+    
+    <!-- Navegación premium -->
+    <nav>
+        <div class="nav-container container">
+            <a href="#" class="logo">🛡️ SurvivalGuide</a>
+            
+            <button id="mobile-menu-btn" aria-label="Menú">
+                <span class="menu-icon">☰</span>
+            </button>
+            
+            <ul id="nav-menu">
+                <li><a href="#supervivencia"><i class="fas fa-first-aid"></i> Supervivencia</a></li>
+                <li><a href="#conflictos"><i class="fas fa-book"></i> Conflictos</a></li>
+                <li><a href="#mapas"><i class="fas fa-map-marked-alt"></i> Mapas</a></li>
+                <li><a href="#recursos"><i class="fas fa-tools"></i> Recursos</a></li>
+                <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Contenido principal mejorado -->
+    <main class="container">
+        <!-- Sección Supervivencia ampliada -->
+        <section id="supervivencia">
+            <h2><i class="fas fa-first-aid"></i> Tácticas de Supervivencia</h2>
+            <p class="section-intro">Técnicas probadas en combate real y estrategias de supervivencia basadas en experiencias históricas.</p>
+            
+            <div class="grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                <!-- Kit de Emergencia Avanzado -->
+                <article class="card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80')"></div>
+                    <div class="card-content">
+                        <h3>Kit de Emergencia Avanzado</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <h4>Básicos:</h4>
+                                <ul style="list-style-type: none;">
+                                    <li><i class="fas fa-tint"></i> Agua (4L/persona/día)</li>
+                                    <li><i class="fas fa-utensils"></i> Alimentos no perecederos (3 semanas)</li>
+                                    <li><i class="fas fa-broadcast-tower"></i> Radio NOAA con manivela</li>
+                                    <li><i class="fas fa-flashlight"></i> Linterna táctica + baterías</li>
+                                    <li><i class="fas fa-fire"></i> Encendedor/cerillas impermeables</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Protección:</h4>
+                                <ul style="list-style-type: none;">
+                                    <li><i class="fas fa-head-side-mask"></i> Máscara antigás (NBC)</li>
+                                    <li><i class="fas fa-vest"></i> Chaleco antibalas (nivel IIIA+)</li>
+                                    <li><i class="fas fa-bell"></i> Silbato de emergencia</li>
+                                    <li><i class="fas fa-filter"></i> Filtro de agua portátil</li>
+                                    <li><i class="fas fa-biohazard"></i> Kit primeros auxilios táctico</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Refugio Antiaéreo -->
+                <article class="card">
+                    <div class="card-image" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Bundesarchiv_Bild_146-1971-070-61%2C_Luftschutzkeller.jpg/800px-Bundesarchiv_Bild_146-1971-070-61%2C_Luftschutzkeller.jpg')"></div>
+                    <div class="card-content">
+                        <h3>Refugio Antiaéreo Casero</h3>
+                        <ul style="list-style-type: none;">
+                            <li><i class="fas fa-check-circle"></i> Ubicación: Sótano o habitación interior sin ventanas</li>
+                            <li><i class="fas fa-check-circle"></i> Refuerzo: Sacos de arena (60cm grosor paredes)</li>
+                            <li><i class="fas fa-check-circle"></i> Ventilación: Tubos PVC con filtro HEPA</li>
+                            <li><i class="fas fa-check-circle"></i> Suministros: Agua, comida, medicinas para 72h</li>
+                            <li><i class="fas fa-check-circle"></i> Seguridad: Puerta blindada o reforzada</li>
+                            <li><i class="fas fa-check-circle"></i> Comunicación: Radio de emergencia</li>
+                        </ul>
+                    </div>
+                </article>
+                
+                <!-- Tácticas Urbanas -->
+                <article class="card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                    <div class="card-content">
+                        <h3>Supervivencia Urbana</h3>
+                        <ul style="list-style-type: none;">
+                            <li><i class="fas fa-check-circle"></i> Movimiento: Usa rutas alternativas y evita calles principales</li>
+                            <li><i class="fas fa-check-circle"></i> Camuflaje: Viste como la población local</li>
+                            <li><i class="fas fa-check-circle"></i> Agua: Conoce fuentes alternas (calentadores, cisternas)</li>
+                            <li><i class="fas fa-check-circle"></i> Alimento: Almacena comida de alto valor calórico</li>
+                            <li><i class="fas fa-check-circle"></i> Seguridad: Establece señales de alerta temprana</li>
+                        </ul>
+                    </div>
+                </article>
+                
+                <!-- Primeros Auxilios -->
+                <article class="card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                    <div class="card-content">
+                        <h3>Medicina de Combate</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <h4>Equipo Esencial:</h4>
+                                <ul style="list-style-type: none;">
+                                    <li><i class="fas fa-bandage"></i> Torniquete CAT</li>
+                                    <li><i class="fas fa-syringe"></i> Jeringas y agujas estériles</li>
+                                    <li><i class="fas fa-pills"></i> Analgésicos y antibióticos</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Técnicas:</h4>
+                                <ul style="list-style-type: none;">
+                                    <li><i class="fas fa-hand-holding-medical"></i> Control de hemorragias</li>
+                                    <li><i class="fas fa-lungs"></i> Respiración de rescate</li>
+                                    <li><i class="fas fa-burn"></i> Tratamiento de quemaduras</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <!-- Sección Conflictos ampliada -->
+        <section id="conflictos">
+            <h2><i class="fas fa-book"></i> Enciclopedia de Conflictos</h2>
+            <p class="section-intro">Análisis detallado de conflictos históricos y modernos con lecciones aplicables a situaciones actuales.</p>
+            
+            <div class="filters" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0; align-items: center;">
+                <span style="margin-right: 1rem; color: rgba(255,255,255,0.7);">Filtrar por:</span>
+                <button class="filter-btn active" data-era="all">Todos</button>
+                <button class="filter-btn" data-era="xx">Siglo XX</button>
+                <button class="filter-btn" data-era="xxi">Siglo XXI</button>
+                <button class="filter-btn" data-era="ancient">Antiguos</button>
+                <div class="search-box" style="position: relative; flex-grow: 1; max-width: 300px; margin-left: auto;">
+                    <input type="text" id="search" placeholder="Buscar conflicto..." style="width: 100%; padding: 0.5rem 1rem 0.5rem 2rem; border-radius: 20px; border: none; background: rgba(255,255,255,0.1); color: white;">
+                    <i class="fas fa-search" style="position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.7);"></i>
+                </div>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline" id="conflict-timeline"></div>
+                <div class="timeline-years" style="display: flex; justify-content: space-between; color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+                    <span>1914</span>
+                    <span>2023</span>
+                </div>
+            </div>
+            
+            <div class="conflict-gallery" id="conflict-gallery"></div>
+        </section>
+        
+        <!-- Sección Mapas mejorada -->
+        <section id="mapas">
+            <h2><i class="fas fa-map-marked-alt"></i> Mapas Estratégicos</h2>
+            <p class="section-intro">Recursos cartográficos actualizados para planificación de seguridad y evacuación.</p>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="refugios">Refugios</button>
+                <button class="tab-btn" data-tab="peligro">Zonas Peligro</button>
+                <button class="tab-btn" data-tab="recursos">Recursos Locales</button>
+                <button class="tab-btn" data-tab="evacuacion">Rutas Evacuación</button>
+            </div>
+            
+            <div class="tab-content active" id="refugios">
+                <div id="refuge-map" class="map-container"></div>
+                <div class="map-legend">
+                    <div class="legend-icon safe">Refugios oficiales</div>
+                    <div class="legend-icon hospital">Hospitales seguros</div>
+                    <div class="legend-icon danger">Zonas a evitar</div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="peligro">
+                <div id="danger-map" class="map-container"></div>
+                <div class="map-legend">
+                    <div class="legend-icon danger">Alto riesgo</div>
+                    <div class="legend-icon warning">Riesgo medio</div>
+                    <div class="legend-icon safe">Zonas seguras</div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="recursos">
+                <div id="resources-map" class="map-container"></div>
+            </div>
+            
+            <div class="tab-content" id="evacuacion">
+                <div id="evacuation-map" class="map-container"></div>
+            </div>
+        </section>
+        
+        <!-- Sección Recursos ampliada -->
+        <section id="recursos">
+            <h2><i class="fas fa-tools"></i> Recursos Esenciales</h2>
+            <p class="section-intro">Herramientas, manuales y enlaces verificados para preparación y supervivencia.</p>
+            
+            <div class="resource-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <article class="card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80')"></div>
+                    <div class="card-content">
+                        <h3><i class="fas fa-file-pdf"></i> Manuales Tácticos</h3>
+                        <ul style="list-style-type: none;">
+                            <li><a href="https://www.fema.gov/pdf/library/fema403_chapter5.pdf" target="_blank" rel="noopener"><i class="fas fa-download"></i> Supervivencia Urbana (FEMA)</a></li>
+                            <li><a href="https://www.redcross.org/content/dam/redcross/atg/PDF_s/Preparedness___Disaster_Recovery/Disaster_Preparedness/FirstAid/First_Aid_CPR_AED_Manual.pdf" target="_blank" rel="noopener"><i class="fas fa-download"></i> Primeros Auxilios Avanzados</a></li>
+                            <li><a href="https://www.ready.gov/sites/default/files/2020-11/ready.gov-nuclear-explosion-shelter.pdf" target="_blank" rel="noopener"><i class="fas fa-download"></i> Refugios Antinucleares</a></li>
+                            <li><a href="https://www.cdc.gov/nceh/radiation/emergencies/pdf/food-and-water-safety-after-radiological-emergency.pdf" target="_blank" rel="noopener"><i class="fas fa-download"></i> Seguridad Alimentaria</a></li>
+                        </ul>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80')"></div>
+                    <div class="card-content">
+                        <h3><i class="fas fa-satellite-dish"></i> Enlaces Vitales</h3>
+                        <ul style="list-style-type: none;">
+                            <li><a href="https://www.icrc.org/es" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Cruz Roja Internacional</a></li>
+                            <li><a href="https://www.acnur.org" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> ACNUR (Refugiados)</a></li>
+                            <li><a href="https://www.who.int/emergencies" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> OMS - Emergencias</a></li>
+                            <li><a href="https://www.ready.gov" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Preparación Emergencias (EEUU)</a></li>
+                        </ul>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                    <div class="card-content">
+                        <h3><i class="fas fa-mobile-alt"></i> Aplicaciones Útiles</h3>
+                        <ul style="list-style-type: none;">
+                            <li><i class="fas fa-map-marked-alt"></i> <strong>OsmAnd</strong>: Mapas offline</li>
+                            <li><i class="fas fa-first-aid"></i> <strong>Primeros Auxilios (Cruz Roja)</strong></li>
+                            <li><i class="fas fa-radiation-alt"></i> <strong>Radiation Alert</strong>: Detección nuclear</li>
+                            <li><i class="fas fa-wifi"></i> <strong>Bridgefy</strong>: Mensajería sin internet</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <!-- Sección de Contacto -->
+        <section id="contacto">
+            <h2><i class="fas fa-envelope"></i> Contacto y Soporte</h2>
+            <div class="card" style="padding: 2rem;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h3>Información de Contacto</h3>
+                        <ul style="list-style-type: none;">
+                            <li><i class="fas fa-envelope"></i> contacto@supervivenciabelica.com</li>
+                            <li><i class="fas fa-phone"></i> +34 123 456 789</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Madrid, España</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Formulario de Contacto</h3>
+                        <form id="contact-form" style="display: grid; gap: 1rem;">
+                            <input type="text" id="name" placeholder="Nombre" required style="padding: 0.75rem; border-radius: var(--radius); border: none; background: rgba(255,255,255,0.1); color: white;">
+                            <input type="email" id="email" placeholder="Email" required style="padding: 0.75rem; border-radius: var(--radius); border: none; background: rgba(255,255,255,0.1); color: white;">
+                            <textarea id="message" placeholder="Mensaje" rows="4" required style="padding: 0.75rem; border-radius: var(--radius); border: none; background: rgba(255,255,255,0.1); color: white;"></textarea>
+                            <button type="submit" style="padding: 0.75rem 1.5rem; background: var(--secondary); color: white; border: none; border-radius: var(--radius); cursor: pointer; transition: var(--transition);">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Pie de página mejorado -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-phone-alt"></i> Contactos de Emergencia</h4>
+                    <ul>
+                        <li>112 - Emergencias Europa</li>
+                        <li>911 - Emergencias América</li>
+                        <li>101 - Policía España</li>
+                        <li>061 - Emergencias Médicas</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4><i class="fas fa-globe-europe"></i> Enlaces Internacionales</h4>
+                    <ul>
+                        <li><a href="https://www.icrc.org" target="_blank" rel="noopener">Cruz Roja Internacional</a></li>
+                        <li><a href="https://www.unhcr.org" target="_blank" rel="noopener">ACNUR</a></li>
+                        <li><a href="https://www.who.int" target="_blank" rel="noopener">Organización Mundial de la Salud</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4><i class="fas fa-code"></i> Tecnologías</h4>
+                    <p>Leaflet.js · OpenStreetMap</p>
+                    <p>Datos actualizados diariamente</p>
+                    <p>Modo offline disponible</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© <span id="current-year">2023</span> Guía Avanzada de Supervivencia Bélica | <a href="#" id="privacy-link">Política de Privacidad</a> | <a href="#" id="terms-link">Términos de Uso</a></p>
+                <p class="disclaimer">Este sitio web es solo para fines educativos e informativos. La información proporcionada no constituye asesoramiento profesional. Para situaciones reales, consulte siempre con autoridades y profesionales competentes.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Modal mejorado -->
+    <div id="war-modal" class="modal">
+        <div class="modal-content">
+            <button class="close">&times;</button>
+            <h2 id="modal-title">Título del Conflicto</h2>
+            <div class="modal-subtitle">
+                <span id="modal-date"><i class="fas fa-calendar-alt"></i> Fechas</span>
+                <span id="modal-location"><i class="fas fa-map-marker-alt"></i> Ubicación</span>
+                <span id="modal-deaths"><i class="fas fa-skull-crossbones"></i> Víctimas</span>
+                <span id="modal-type"><i class="fas fa-flag"></i> Tipo de Conflicto</span>
+            </div>
+            
+            <div id="modal-map" class="map-container"></div>
+            
+            <div class="modal-details">
+                <h3><i class="fas fa-book-open"></i> Contexto Histórico</h3>
+                <div id="modal-desc" class="modal-text"></div>
+                
+                <h3><i class="fas fa-survival"></i> Lecciones de Supervivencia</h3>
+                <div id="modal-lessons" class="modal-text"></div>
+                
+                <h3><i class="fas fa-tactical"></i> Tácticas Relevantes</h3>
+                <div id="modal-tactics" class="modal-text"></div>
+                
+                <div class="modal-sources">
+                    <h4><i class="fas fa-link"></i> Fuentes Confiables</h4>
+                    <div id="modal-sources-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript mejorado -->
+    <script>
+        // Base de datos ampliada de conflictos (15 conflictos)
+        const conflictos = [
+            {
+                id: 1,
+                titulo: "Primera Guerra Mundial (1914-1918)",
+                fecha: "1914-1918",
+                ubicacion: "Europa, África, Oriente Medio",
+                muertes: "20 millones",
+                tipo: "Guerra global",
+                imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Bundesarchiv_Bild_183-R05148%2C_Westfront%2C_verwundete_Engl%C3%A4nder.jpg/800px-Bundesarchiv_Bild_183-R05148%2C_Westfront%2C_verwundete_Engl%C3%A4nder.jpg",
+                coordenadas: [50.8503, 4.3517],
+                era: "xx",
+                descripcion: "Conocida como 'La Gran Guerra', este conflicto global enfrentó a las Potencias Aliadas (Triple Entente) contra las Potencias Centrales. Marcó el primer uso masivo de armas químicas, guerra de trincheras y tecnologías modernas como tanques y aviación combatiente.",
+                lecciones: "1. Refugios subterráneos profundos son esenciales contra artillería. 2. Máscaras antigás deben ser parte del equipo básico. 3. Conservación de alimentos a largo plazo es crítica en asedios.",
+                tacticas: "1. Construcción de trincheras en zigzag. 2. Uso de túneles para minado. 3. Patrullas de reconocimiento nocturnas.",
+                fuentes: [
+                    {nombre: "BBC Historia - WWI", url: "https://www.bbc.com/history/worldwars/wwone/"},
+                    {nombre: "Museo Imperial de la Guerra", url: "https://www.iwm.org.uk/history"}
+                ],
+                favorito: false
+            },
+            {
+                id: 2,
+                titulo: "Segunda Guerra Mundial (1939-1945)",
+                fecha: "1939-1945",
+                ubicacion: "Global",
+                muertes: "70-85 millones",
+                tipo: "Guerra global",
+                imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Bundesarchiv_Bild_146-1972-045-07%2C_Russland%2C_Kampf_um_Stalingrad.jpg/800px-Bundesarchiv_Bild_146-1972-045-07%2C_Russland%2C_Kampf_um_Stalingrad.jpg",
+                coordenadas: [52.5200, 13.4050],
+                era: "xx",
+                descripcion: "El conflicto más mortífero de la historia, que incluyó el Holocausto y el uso de bombas atómicas. Enfrentó a las Potencias del Eje (Alemania, Italia, Japón) contra los Aliados (EEUU, URSS, Reino Unido, Francia).",
+                lecciones: "1. Evacuación temprana de zonas urbanas objetivo. 2. Camuflaje de luces durante apagones. 3. Identificación de refugios antiaéreos.",
+                tacticas: "1. Técnicas de supervivencia en ciudades bombardeadas. 2. Movimiento en pequeños grupos. 3. Uso de alcantarillado para desplazamiento seguro.",
+                fuentes: [
+                    {nombre: "Enciclopedia del Holocausto", url: "https://encyclopedia.ushmm.org/"},
+                    {nombre: "National WWII Museum", url: "https://www.nationalww2museum.org/"}
+                ],
+                favorito: false
+            },
+            {
+                id: 3,
+                titulo: "Guerra de Vietnam (1955-1975)",
+                fecha: "1955-1975",
+                ubicacion: "Vietnam, Laos, Camboya",
+                muertes: "1-3 millones",
+                tipo: "Guerra de guerrillas",
+                imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Vietnam_War_Demilitarized_Zone.jpg/800px-Vietnam_War_Demilitarized_Zone.jpg",
+                coordenadas: [10.8231, 106.6297],
+                era: "xx",
+                descripcion: "Conflicto entre Vietnam del Norte comunista y Vietnam del Sur con apoyo de EE.UU. Destacó por la guerra de guerrillas del Viet Cong, uso extensivo de helicópteros, agentes químicos (Agente Naranja) y la cobertura mediática que influyó en la opinión pública.",
+                lecciones: "1. Supervivencia en jungla: purificación de agua, evitación de trampas. 2. Detección de túneles y escondites. 3. Movimiento silencioso en terreno denso.",
+                tacticas: "1. Uso de túneles y bunkers ocultos. 2. Trampas improvisadas con recursos locales. 3. Tácticas de emboscada y retirada rápida.",
+                fuentes: [
+                    {nombre: "Vietnam War Digital Archive", url: "https://vietnamwar.lib.utexas.edu/"},
+                    {nombre: "PBS Vietnam", url: "https://www.pbs.org/wgbh/americanexperience/films/vietnam/"}
+                ],
+                favorito: false
+            },
+            {
+                id: 4,
+                titulo: "Guerra del Golfo (1990-1991)",
+                fecha: "1990-1991",
+                ubicacion: "Kuwait, Irak, Arabia Saudita",
+                muertes: "20,000-35,000",
+                tipo: "Guerra convencional",
+                imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/A_US_Marine_checks_his_equipment_during_Operation_Desert_Storm_in_1991.jpg/800px-A_US_Marine_checks_his_equipment_during_Operation_Desert_Storm_in_1991.jpg",
+                coordenadas: [29.3759, 47.9774],
+                era: "xx",
+                descripcion: "Conflicto entre Irak y una coalición internacional tras la invasión iraquí de Kuwait. Destacó por el uso de tecnología militar avanzada (bombas inteligentes, guerra electrónica, sistemas GPS) y la rápida victoria de las fuerzas de la coalición.",
+                lecciones: "1. Protección contra ataques aéreos precisos. 2. Seguridad en ambientes desérticos: hidratación, protección solar. 3. Gestión de suministros en condiciones extremas.",
+                tacticas: "1. Movimiento nocturno en terrenos abiertos. 2. Uso de señuelos y engaños. 3. Dispersión de recursos y personal.",
+                fuentes: [
+                    {nombre: "BBC Gulf War", url: "https://www.bbc.com/news/world-middle-east-15479879"},
+                    {nombre: "US Army History", url: "https://history.army.mil/html/bookshelves/resmat/desert-storm/"}
+                ],
+                favorito: false
+            },
+            {
+                id: 5,
+                titulo: "Guerras Yugoslavas (1991-2001)",
+                fecha: "1991-2001",
+                ubicacion: "Balcanes",
+                muertes: "140,000+",
+                tipo: "Guerra civil étnica",
+                imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Destruction_in_Sarajevo_1992.jpg/800px-Destruction_in_Sarajevo_1992.jpg",
+                coordenadas: [44.8178, 20.4569],
+                era: "xx",
+                descripcion: "Serie de conflictos étnicos en la ex-Yugoslavia que incluyeron limpieza étnica y el sitio más largo de una capital moderna (Sarajevo, 1,425 días).",
+                lecciones: "1. Supervivencia urbana bajo asedio prolongado. 2. Tratamiento de heridas por francotiradores. 3. Creación de rutas seguras en ciudades.",
+                tacticas: "1. Movimiento a través de edificios conectados. 2. Uso de túneles y alcantarillas. 3. Creación de hospitales improvisados en sótanos.",
+                fuentes: [
+                    {nombre: "Tribunal Penal Internacional", url: "https://www.icty.org/"},
+                    {nombre: "Sitio de Sarajevo", url: "https://sarajevo.travel/en/the-siege-of-sarajevo/"}
+                ],
+                favorito: false
+            },
+            {
+                id: 6,
+                titulo: "Guerra de Ucrania (2022-actualidad)",
+                fecha: "2022-actualidad",
+                ubicacion: "Ucrania",
+                muertes: "200,000+",
+                tipo: "Guerra convencional/ciber",
+                imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ukrainian_soldiers_in_Donetsk_Oblast_2022.jpg/800px-Ukrainian_soldiers_in_Donetsk_Oblast_2022.jpg",
+                coordenadas: [50.4501, 30.5234],
+                era: "xxi",
+                descripcion: "Invasión rusa que ha causado la mayor crisis de refugiados en Europa desde la WWII. Combina guerra convencional con ciberataques, uso masivo de drones y guerra de información.",
+                lecciones: "1. Refugios antibombas en sótanos reforzados. 2. Comunicación sin internet (walkie-talkies, redes mesh). 3. Primeros auxilios bajo bombardeos.",
+                tacticas: "1. Uso de aplicaciones móviles para reportar movimientos enemigos. 2. Técnicas de camuflaje contra reconocimiento aéreo. 3. Creación de puntos de resistencia urbanos.",
+                fuentes: [
+                    {nombre: "Liveuamap", url: "https://liveuamap.com/"},
+                    {nombre: "ACNUR Crisis Ucrania", url: "https://www.acnur.org/emergencias/ucrania"}
+                ],
+                favorito: false
+            },
+            {
+                id: 7,
+                titulo: "Guerra Civil Siria (2011-actualidad)",
+                fecha: "2011-actualidad",
+                ubicacion: "Siria",
+                muertes: "500,000+",
+                tipo: "Guerra civil/proxy",
+                imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Aleppo_after_two_years_of_war_%2825%29.JPG/800px-Aleppo_after_two_years_of_war_%2825%29.JPG",
+                coordenadas: [33.5138, 36.2765],
+                era: "xxi",
+                descripcion: "Conflicto complejo con participación de potencias extranjeras. Incluyó uso de armas químicas, surgimiento del Estado Islámico y asedios prolongados (Aleppo, Ghouta).",
+                lecciones: "1. Técnicas de supervivencia en ciudades sitiadas. 2. Tratamiento de heridas por armas químicas. 3. Purificación de agua en condiciones extremas.",
+                tacticas: "1. Uso de túneles y pasadizos secretos. 2. Hospitales subterráneos improvisados. 3. Sistemas de alerta temprana para ataques aéreos.",
+                fuentes: [
+                    {nombre: "Observatorio Sirio de Derechos Humanos", url: "https://www.syriahr.com/en/"},
+                    {nombre: "Crisis Siria - ACNUR", url: "https://www.acnur.org/situacion-en-siria.html"}
+                ],
+                favorito: false
+            },
+            {
+                id: 8,
+                titulo: "Guerra de Corea (1950-1953)",
+                fecha: "1950-1953",
+                ubicacion: "Península de Corea",
+                muertes: "2.5 millones",
+                tipo: "Guerra proxy",
+                imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Korean_War_Montage_2.png/800px-Korean_War_Montage_2.png",
+                coordenadas: [37.5665, 126.9780],
+                era: "xx",
+                descripcion: "Conflicto entre Corea del Norte (apoyada por China y la URSS) y Corea del Sur (apoyada por la ONU liderada por EEUU). La guerra incluyó condiciones climáticas extremas y el uso temprano de helicópteros médicos.",
+                lecciones: "1. Supervivencia en climas extremadamente fríos. 2. Técnicas de camuflaje en montañas. 3. Uso de cuevas como refugios naturales.",
+                tacticas: "1. Uso de túneles y posiciones excavadas en montañas. 2. Sistemas de suministro en terreno montañoso. 3. Tácticas de emboscada en pasos estrechos.",
+                fuentes: [
+                    {nombre: "Korean War Legacy", url: "https://koreanwarlegacy.org/"},
+                    {nombre: "Korean War Digital History", url: "https://www.koreanwar.org/"}
+                ],
+                favorito: false
+            },
+            {
+                id: 9,
+                titulo: "Guerra de Afganistán (2001-2021)",
+                fecha: "2001-2021",
+                ubicacion: "Afganistán",
+                muertes: "240,000+",
+                tipo: "Guerra asimétrica",
+                imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/US_Army_soldiers_during_Operation_Enduring_Freedom.jpg/800px-US_Army_soldiers_during_Operation_Enduring_Freedom.jpg",
+                coordenadas: [34.5553, 69.2075],
+                era: "xxi",
+                descripcion: "Conflicto prolongado que comenzó como respuesta a los ataques del 11 de septiembre. Demostró los desafíos de combatir insurgentes en terreno montañoso y las limitaciones de la superioridad tecnológica.",
+                lecciones: "1. Identificación y evitación de IEDs. 2. Supervivencia en ambientes montañosos áridos. 3. Técnicas de negociación con culturas tribales.",
+                tacticas: "1. Uso de caminos alternativos no marcados. 2. Sistemas de alerta temprana para emboscadas. 3. Construcción de puestos avanzados autosuficientes.",
+                fuentes: [
+                    {nombre: "Afghanistan War - BBC", url: "https://www.bbc.com/news/world-south-asia-11371138"},
+                    {nombre: "Watson Institute - Costs of War", url: "https://watson.brown.edu/costsofwar/"}
+                ],
+                favorito: false
+            },
+            {
+                id: 10,
+                titulo: "Guerra Civil Libanesa (1975-1990)",
+                fecha: "1975-1990",
+                ubicacion: "Líbano",
+                muertes: "120,000-250,000",
+                tipo: "Guerra civil",
+                imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Beirut_Green_Line_1982.jpg/800px-Beirut_Green_Line_1982.jpg",
+                coordenadas: [33.8938, 35.5018],
+                era: "xx",
+                descripcion: "Complejo conflicto sectario con participación de múltiples facciones y países extranjeros. Incluyó la división de Beirut en zonas cristianas y musulmanas separadas por la 'Línea Verde'.",
+                lecciones: "1. Supervivencia en ciudades divididas. 2. Identificación de zonas seguras. 3. Movimiento en áreas multi-confesionales.",
+                tacticas: "1. Uso de edificios altos para observación. 2. Creación de puntos de control comunitarios. 3. Comunicación entre facciones rivales.",
+                fuentes: [
+                    {nombre: "BBC Lebanon War", url: "https://www.bbc.com/news/world-middle-east-14649284"},
+                    {nombre: "Lebanon's Civil War", url: "https://www.aljazeera.com/features/2020/4/13/lebanons-civil-war-what-happened-and-why"}
+                ],
+                favorito: false
+            },
+            {
+                id: 11,
+                titulo: "Guerra de los Balcanes (1912-1913)",
+                fecha: "1912-1913",
+                ubicacion: "Península Balcánica",
+                muertes: "200,000+",
+                tipo: "Guerra regional",
+                imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Balkan_War_1912.jpg/800px-Balkan_War_1912.jpg",
+                coordenadas: [42.7339, 25.4858],
+                era: "xx",
+                descripcion: "Serie de conflictos que precedieron a la Primera Guerra Mundial, mostrando la volatilidad de las alianzas regionales y los conflictos étnicos.",
+                lecciones: "1. Importancia de entender tensiones étnicas locales. 2. Movilidad en terreno montañoso. 3. Comunicación con poblaciones locales.",
+                tacticas: "1. Uso de terreno montañoso para defensa. 2. Movimientos rápidos de infantería. 3. Coordinación entre fuerzas aliadas.",
+                fuentes: [
+                    {nombre: "Enciclopedia Britannica", url: "https://www.britannica.com/event/Balkan-Wars"},
+                    {nombre: "Historia Balcánica", url: "https://www.balkanhistory.org/"}
+                ],
+                favorito: false
+            },
+            {
+                id: 12,
+                titulo: "Guerra Irán-Irak (1980-1988)",
+                fecha: "1980-1988",
+                ubicacion: "Golfo Pérsico",
+                muertes: "500,000-1,000,000",
+                tipo: "Guerra convencional",
+                imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Iranian_soldiers_with_gas_mask_during_Iran-Iraq_War.jpg/800px-Iranian_soldiers_with_gas_mask_during_Iran-Iraq_War.jpg",
+                coordenadas: [32.4279, 53.6880],
+                era: "xx",
+                descripcion: "Conflicto prolongado entre Irán e Irak que incluyó el uso extensivo de armas químicas y tácticas de guerra de trincheras modernas.",
+                lecciones: "1. Protección contra armas químicas. 2. Supervivencia en terrenos pantanosos. 3. Suministros médicos para heridas por agentes químicos.",
+                tacticas: "1. Guerra de trincheras moderna. 2. Uso de oleadas humanas. 3. Defensa en profundidad.",
+                fuentes: [
+                    {nombre: "BBC Iran-Iraq War", url: "https://www.bbc.com/news/world-middle-east-47032829"},
+                    {nombre: "The Iran-Iraq War Project", url: "https://iraniraqwar.com/"}
+                ],
+                favorito: false
+            },
+            {
+                id: 13,
+                titulo: "Guerra Civil Somalí (1991-actualidad)",
+                fecha: "1991-actualidad",
+                ubicacion: "Somalia",
+                muertes: "500,000+",
+                tipo: "Guerra civil",
+                imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Mogadishu_Black_Hawk_Down_1993.jpg/800px-Mogadishu_Black_Hawk_Down_1993.jpg",
+                coordenadas: [2.0371, 45.3438],
+                era: "xxi",
+                descripcion: "Conflicto complejo con múltiples facciones y intervenciones internacionales. Ejemplo de estado fallido y guerra asimétrica en entorno urbano.",
+                lecciones: "1. Supervivencia en estados fallidos. 2. Seguridad en mercados y puntos de distribución. 3. Protección contra secuestros.",
+                tacticas: "1. Movimiento en barrios controlados por clanes. 2. Negociación con líderes locales. 3. Evitación de zonas de combate urbano.",
+                fuentes: [
+                    {nombre: "ACNUR Somalia", url: "https://www.acnur.org/somalia.html"},
+                    {nombre: "Crisis Group Somalia", url: "https://www.crisisgroup.org/africa/horn-africa/somalia"}
+                ],
+                favorito: false
+            },
+            {
+                id: 14,
+                titulo: "Guerra de Nagorno-Karabaj (2020)",
+                fecha: "2020",
+                ubicacion: "Cáucaso Sur",
+                muertes: "6,500+",
+                tipo: "Guerra convencional",
+                imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Nagorno-Karabakh_war_-_destroyed_Armenian_T-72_tank.jpg/800px-Nagorno-Karabakh_war_-_destroyed_Armenian_T-72_tank.jpg",
+                coordenadas: [40.1431, 47.5769],
+                era: "xxi",
+                descripcion: "Conflicto entre Armenia y Azerbaiyán que destacó por el uso masivo de drones y guerra electrónica en terreno montañoso.",
+                lecciones: "1. Protección contra drones. 2. Camuflaje en terreno montañoso. 3. Comunicaciones seguras bajo guerra electrónica.",
+                tacticas: "1. Uso de túneles y posiciones excavadas. 2. Sistemas de alerta temprana para drones. 3. Movimiento nocturno en terreno abierto.",
+                fuentes: [
+                    {nombre: "BBC Nagorno-Karabakh", url: "https://www.bbc.com/news/world-europe-54324772"},
+                    {nombre: "CSIS Analysis", url: "https://www.csis.org/analysis/second-nagorno-karabakh-war"}
+                ],
+                favorito: false
+            },
+            {
+                id: 15,
+                titulo: "Guerra de los Seis Días (1967)",
+                fecha: "1967",
+                ubicacion: "Oriente Medio",
+                muertes: "20,000+",
+                tipo: "Guerra convencional",
+                imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/IDF_paratroopers_at_Western_Wall_1967.jpg/800px-IDF_paratroopers_at_Western_Wall_1967.jpg",
+                coordenadas: [31.7683, 35.2137],
+                era: "xx",
+                descripcion: "Conflicto breve pero intenso entre Israel y una coalición árabe que demostró la importancia del dominio aéreo y la movilidad en guerra moderna.",
+                lecciones: "1. Preparación rápida para evacuación. 2. Identificación de refugios contra ataques aéreos. 3. Suministros para desplazamientos rápidos.",
+                tacticas: "1. Movimiento rápido en terreno desértico. 2. Uso de posiciones defensivas improvisadas. 3. Comunicación en situaciones de movilidad extrema.",
+                fuentes: [
+                    {nombre: "BBC Six-Day War", url: "https://www.bbc.com/news/world-middle-east-39960461"},
+                    {nombre: "Jewish Virtual Library", url: "https://www.jewishvirtuallibrary.org/the-six-day-war"}
+                ],
+                favorito: false
+            }
+        ];
+
+        // Variables globales mejoradas
+        let modalMap, refugeMap, dangerMap, resourcesMap, evacuationMap;
+        let currentFilter = 'all';
+        let currentTab = 'refugios';
+        let mapInitialized = false;
+        let favoriteConflicts = JSON.parse(localStorage.getItem('favoriteConflicts')) || [];
+
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configurar fecha actual
+            updateCurrentDate();
+            
+            // Inicializar contenido
+            loadFavorites();
+            renderConflictGallery();
+            renderTimeline();
+            setupEventListeners();
+            
+            // Precarga de mapas cuando sean visibles
+            initMapsWhenVisible();
+            
+            // Configurar política de privacidad y términos
+            setupLegalLinks();
+            
+            // Registrar Service Worker para modo offline
+            registerServiceWorker();
+            
+            // Animar línea de tiempo
+            setTimeout(() => {
+                document.querySelector('.timeline').classList.add('animated');
+            }, 500);
+        });
+
+        // Función para registrar Service Worker
+        function registerServiceWorker() {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('ServiceWorker registration successful');
+                }).catch(err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            }
+        }
+
+        // Función para actualizar fecha
+        function updateCurrentDate() {
+            const now = new Date();
+            document.getElementById('current-date').textContent = now.toLocaleDateString('es-ES', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            document.getElementById('current-year').textContent = now.getFullYear();
+        }
+
+        // Función para cargar favoritos
+        function loadFavorites() {
+            conflictos.forEach(conflicto => {
+                conflicto.favorito = favoriteConflicts.includes(conflicto.id);
+            });
+        }
+
+        // Función para guardar favoritos
+        function saveFavorite(id) {
+            const index = favoriteConflicts.indexOf(id);
+            if (index === -1) {
+                favoriteConflicts.push(id);
+            } else {
+                favoriteConflicts.splice(index, 1);
+            }
+            localStorage.setItem('favoriteConflicts', JSON.stringify(favoriteConflicts));
+            loadFavorites();
+        }
+
+        // Mostrar modal genérico mejorado
+        function showModal(title, content, isLarge = false) {
+            const modal = document.getElementById('war-modal');
+            modal.querySelector('#modal-title').textContent = title;
+            modal.querySelector('#modal-desc').innerHTML = content;
+            modal.querySelector('#modal-lessons').innerHTML = '';
+            modal.querySelector('#modal-tactics').innerHTML = '';
+            modal.querySelector('#modal-sources-list').innerHTML = '';
+            
+            // Ajustar tamaño según necesidad
+            if (isLarge) {
+                modal.querySelector('.modal-content').classList.add('large');
+            } else {
+                modal.querySelector('.modal-content').classList.remove('large');
+            }
+            
+            // Ocultar elementos no necesarios
+            modal.querySelector('.modal-subtitle').style.display = 'none';
+            modal.querySelector('#modal-map').style.display = 'none';
+            
+            // Mostrar modal
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Inicializar mapas cuando sean visibles (mejorado)
+        function initMapsWhenVisible() {
+            if (mapInitialized) return;
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Cargar Leaflet.js dinámicamente
+                        loadLeaflet().then(() => {
+                            initMaps();
+                            mapInitialized = true;
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            const mapsSection = document.getElementById('mapas');
+            if (mapsSection) observer.observe(mapsSection);
+        }
+
+        // Cargar Leaflet.js dinámicamente
+        function loadLeaflet() {
+            return new Promise((resolve, reject) => {
+                if (window.L) {
+                    resolve();
+                    return;
+                }
+                
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css';
+                link.integrity = 'sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==';
+                link.crossOrigin = '';
+                document.head.appendChild(link);
+                
+                const script = document.createElement('script');
+                script.src = 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.js';
+                script.integrity = 'sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==';
+                script.crossOrigin = '';
+                script.onload = resolve;
+                script.onerror = reject;
+                document.head.appendChild(script);
+            });
+        }
+
+        // Configurar enlaces legales
+        function setupLegalLinks() {
+            document.getElementById('privacy-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                showModal('Política de Privacidad', `
+                    <p>Este sitio no recolecta datos personales. Todas las imágenes son de dominio público o bajo licencias Creative Commons.</p>
+                    <p>No utilizamos cookies de seguimiento y respetamos tu privacidad.</p>
+                    <h3>Datos almacenados localmente</h3>
+                    <p>Para mejorar tu experiencia, almacenamos:</p>
+                    <ul>
+                        <li>Tus conflictos favoritos (solo en tu dispositivo)</li>
+                        <li>Preferencias de visualización</li>
+                    </ul>
+                `, true);
+            });
+            
+            document.getElementById('terms-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                showModal('Términos de Uso', `
+                    <p>Este sitio es solo para fines educativos. La información proporcionada no constituye asesoramiento profesional.</p>
+                    <p>Para situaciones reales, consulte siempre con autoridades y profesionales competentes.</p>
+                    <h3>Uso del contenido</h3>
+                    <p>Puedes utilizar el contenido de este sitio para:</p>
+                    <ul>
+                        <li>Fines educativos</li>
+                        <li>Investigación personal</li>
+                        <li>Preparación no comercial</li>
+                    </ul>
+                    <p>Se requiere atribución para usos públicos o redistribución.</p>
+                `, true);
+            });
+        }
+
+        // Renderizar galería de conflictos mejorada con favoritos
+        function renderConflictGallery(filteredConflicts = conflictos) {
+            const gallery = document.querySelector('.conflict-gallery');
+            if (!gallery) return;
+            
+            gallery.innerHTML = '';
+            
+            if (filteredConflicts.length === 0) {
+                gallery.innerHTML = '<p class="no-results">No se encontraron conflictos con estos filtros</p>';
+                return;
+            }
+            
+            filteredConflicts.forEach(conflicto => {
+                const card = document.createElement('article');
+                card.className = `card conflict-card ${conflicto.favorito ? 'favorite' : ''}`;
+                card.dataset.id = conflicto.id;
+                card.dataset.era = conflicto.era;
+                
+                card.innerHTML = `
+                    <div class="card-image" style="background-image: url('${conflicto.imagen}')" 
+                         title="${conflicto.titulo} - ${conflicto.fecha}">
+                        <div class="card-overlay"></div>
+                        <div class="card-badge">${conflicto.era === 'xxi' ? 'Moderno' : 'Histórico'}</div>
+                        <button class="favorite-btn" aria-label="${conflicto.favorito ? 'Quitar de favoritos' : 'Añadir a favoritos'}">
+                            <i class="${conflicto.favorito ? 'fas' : 'far'} fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <h3>${conflicto.titulo}</h3>
+                        <p>${conflicto.descripcion.substring(0, 120)}...</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-calendar-alt"></i> ${conflicto.fecha}</span>
+                            <span><i class="fas fa-skull-crossbones"></i> ${conflicto.muertes}</span>
+                        </div>
+                    </div>
+                `;
+                
+                card.addEventListener('click', (e) => {
+                    if (!e.target.closest('.favorite-btn')) {
+                        openConflictModal(conflicto.id);
+                    }
+                });
+                
+                const favBtn = card.querySelector('.favorite-btn');
+                favBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    saveFavorite(conflicto.id);
+                    card.classList.toggle('favorite');
+                    const icon = favBtn.querySelector('i');
+                    icon.classList.toggle('far');
+                    icon.classList.toggle('fas');
+                    favBtn.setAttribute('aria-label', icon.classList.contains('fas') ? 'Quitar de favoritos' : 'Añadir a favoritos');
+                });
+                
+                gallery.appendChild(card);
+            });
+        }
+
+        // Renderizar línea de tiempo
+        function renderTimeline() {
+            const timeline = document.querySelector('.timeline');
+            if (!timeline) return;
+            
+            timeline.innerHTML = '';
+            
+            // Ordenar conflictos por fecha de inicio
+            const sortedConflicts = [...conflictos].sort((a, b) => {
+                const yearA = parseInt(a.fecha.substring(0, 4));
+                const yearB = parseInt(b.fecha.substring(0, 4));
+                return yearA - yearB;
+            });
+            
+            // Calcular rango de años
+            const minYear = parseInt(sortedConflicts[0].fecha.substring(0, 4));
+            const maxYear = new Date().getFullYear();
+            const yearRange = maxYear - minYear;
+            
+            sortedConflicts.forEach(conflicto => {
+                const startYear = parseInt(conflicto.fecha.substring(0, 4));
+                const position = ((startYear - minYear) / yearRange) * 100;
+                
+                const marker = document.createElement('div');
+                marker.className = 'timeline-marker';
+                marker.style.left = `${position}%`;
+                marker.dataset.id = conflicto.id;
+                marker.textContent = startYear.toString().substring(2);
+                marker.title = `${conflicto.titulo}\n(${conflicto.fecha})`;
+                
+                marker.addEventListener('click', () => openConflictModal(conflicto.id));
+                timeline.appendChild(marker);
+            });
+        }
+
+        // Configurar event listeners
+        function setupEventListeners() {
+            // Filtros de conflictos
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelector('.filter-btn.active').classList.remove('active');
+                    this.classList.add('active');
+                    currentFilter = this.dataset.era;
+                    filterConflicts();
+                });
+            });
+            
+            // Búsqueda con debounce
+            const searchInput = document.getElementById('search');
+            if (searchInput) {
+                searchInput.addEventListener('input', debounce(filterConflicts, 300));
+            }
+            
+            // Tabs de mapas
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelector('.tab-btn.active').classList.remove('active');
+                    this.classList.add('active');
+                    currentTab = this.dataset.tab;
+                    
+                    document.querySelector('.tab-content.active').classList.remove('active');
+                    document.getElementById(currentTab).classList.add('active');
+                    
+                    // Redimensionar mapas al cambiar de pestaña
+                    setTimeout(() => {
+                        if (refugeMap) refugeMap.invalidateSize();
+                        if (dangerMap) dangerMap.invalidateSize();
+                        if (resourcesMap) resourcesMap.invalidateSize();
+                        if (evacuationMap) evacuationMap.invalidateSize();
+                    }, 100);
+                });
+            });
+            
+            // Click en tarjetas de conflicto
+            document.addEventListener('click', function(e) {
+                const card = e.target.closest('.conflict-card');
+                if (card) {
+                    const id = parseInt(card.dataset.id);
+                    openConflictModal(id);
+                }
+                
+                const marker = e.target.closest('.timeline-marker');
+                if (marker) {
+                    const id = parseInt(marker.dataset.id);
+                    openConflictModal(id);
+                }
+            });
+            
+            // Cerrar modal
+            const closeButton = document.querySelector('.close');
+            if (closeButton) {
+                closeButton.addEventListener('click', closeModal);
+            }
+            
+            // Cerrar al hacer clic fuera
+            window.addEventListener('click', function(e) {
+                if (e.target === document.getElementById('war-modal')) {
+                    closeModal();
+                }
+            });
+            
+            // Cerrar con ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+
+            // Formulario de contacto
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    
+                    // Simular envío (en un caso real, usaría fetch o AJAX)
+                    showModal('Mensaje Enviado', `
+                        <p>Gracias por tu mensaje, ${name}. Hemos recibido tu consulta y nos pondremos en contacto contigo pronto.</p>
+                        <p><strong>Email:</strong> ${email}</p>
+                        <p><strong>Mensaje:</strong> ${message.substring(0, 100)}...</p>
+                    `);
+                    
+                    contactForm.reset();
+                });
+            }
+        }
+
+        // Debounce para búsqueda
+        function debounce(func, wait) {
+            let timeout;
+            return function() {
+                const context = this, args = arguments;
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(context, args), wait);
+            };
+        }
+
+        // Filtrar conflictos
+        function filterConflicts() {
+            const searchTerm = document.getElementById('search')?.value.toLowerCase() || '';
+            
+            let filtered = conflictos.filter(conflicto => {
+                const matchesFilter = currentFilter === 'all' || conflicto.era === currentFilter;
+                const matchesSearch = conflicto.titulo.toLowerCase().includes(searchTerm) || 
+                                     conflicto.descripcion.toLowerCase().includes(searchTerm) ||
+                                     conflicto.ubicacion.toLowerCase().includes(searchTerm) ||
+                                     conflicto.tipo.toLowerCase().includes(searchTerm);
+                return matchesFilter && matchesSearch;
+            });
+            
+            renderConflictGallery(filtered);
+        }
+
+        // Abrir modal con detalles del conflicto mejorado
+        function openConflictModal(id) {
+            const modal = document.getElementById('war-modal');
+            const conflicto = conflictos.find(c => c.id === id);
+            
+            if (!modal || !conflicto) return;
+            
+            // Actualizar contenido
+            document.getElementById('modal-title').textContent = conflicto.titulo;
+            document.getElementById('modal-date').innerHTML = `<i class="fas fa-calendar-alt"></i> ${conflicto.fecha}`;
+            document.getElementById('modal-location').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${conflicto.ubicacion}`;
+            document.getElementById('modal-deaths').innerHTML = `<i class="fas fa-skull-crossbones"></i> ${conflicto.muertes}`;
+            document.getElementById('modal-type').innerHTML = `<i class="fas fa-flag"></i> ${conflicto.tipo}`;
+            
+            document.getElementById('modal-desc').innerHTML = `<p>${conflicto.descripcion}</p>`;
+            
+            // Lecciones de supervivencia
+            const lessonsList = conflicto.lecciones.split('. ').filter(l => l.trim() !== '').map(l => `<li>${l.trim()}.</li>`).join('');
+            document.getElementById('modal-lessons').innerHTML = `<ul>${lessonsList}</ul>`;
+            
+            // Tácticas
+            const tacticsList = conflicto.tacticas.split('. ').filter(t => t.trim() !== '').map(t => `<li>${t.trim()}.</li>`).join('');
+            document.getElementById('modal-tactics').innerHTML = `<ul>${tacticsList}</ul>`;
+            
+            // Fuentes
+            const sourcesList = conflicto.fuentes?.map(f => 
+                `<a href="${f.url}" target="_blank" rel="noopener noreferrer" class="source-link"><i class="fas fa-external-link-alt"></i> ${f.nombre}</a>`
+            ).join('<br>') || 'No hay fuentes disponibles';
+            document.getElementById('modal-sources-list').innerHTML = sourcesList;
+            
+            // Botón de favorito
+            const favoriteBtn = document.createElement('button');
+            favoriteBtn.className = `favorite-btn ${conflicto.favorito ? 'active' : ''}`;
+            favoriteBtn.innerHTML = `<i class="${conflicto.favorito ? 'fas' : 'far'} fa-heart"></i> ${conflicto.favorito ? 'Quitar de favoritos' : 'Añadir a favoritos'}`;
+            favoriteBtn.addEventListener('click', () => {
+                saveFavorite(conflicto.id);
+                favoriteBtn.classList.toggle('active');
+                const icon = favoriteBtn.querySelector('i');
+                icon.classList.toggle('far');
+                icon.classList.toggle('fas');
+                favoriteBtn.innerHTML = `<i class="${icon.classList.contains('fas') ? 'fas' : 'far'} fa-heart"></i> ${icon.classList.contains('fas') ? 'Quitar de favoritos' : 'Añadir a favoritos'}`;
+            });
+            
+            document.querySelector('.modal-content').appendChild(favoriteBtn);
+            
+            // Mostrar elementos del modal
+            document.querySelector('.modal-subtitle').style.display = 'flex';
+            document.getElementById('modal-map').style.display = 'block';
+            
+            // Mostrar modal primero para que el mapa tenga dimensiones
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            
+            // Inicializar mapa del conflicto después de un breve retraso
+            setTimeout(() => {
+                if (!window.L) {
+                    loadLeaflet().then(() => initConflictMap(conflicto));
+                } else {
+                    initConflictMap(conflicto);
+                }
+            }, 100);
+        }
+
+        // Inicializar mapa del conflicto
+        function initConflictMap(conflicto) {
+            if (modalMap) modalMap.remove();
+            
+            modalMap = L.map('modal-map', {
+                preferCanvas: true,
+                zoomControl: false
+            }).setView(conflicto.coordenadas, conflicto.ubicacion.toLowerCase().includes('global') ? 2 : 6);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 10,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(modalMap);
+            
+            // Marcador con icono personalizado
+            const warIcon = L.divIcon({
+                className: 'war-marker',
+                html: '<span style="font-size: 1.5rem;">⚔️</span>',
+                iconSize: [32, 32]
+            });
+            
+            L.marker(conflicto.coordenadas, {
+                icon: warIcon
+            }).addTo(modalMap)
+              .bindPopup(`<b>${conflicto.titulo}</b><br>${conflicto.ubicacion}`);
+            
+            // Ajustar el zoom para conflictos globales
+            if (conflicto.ubicacion.toLowerCase().includes('global')) {
+                modalMap.setZoom(2);
+            }
+        }
+
+        // Inicializar todos los mapas
+        function initMaps() {
+            // Mapa de refugios (ejemplo para Madrid)
+            refugeMap = L.map('refuge-map', {
+                preferCanvas: true,
+                zoomControl: false
+            }).setView([40.4168, -3.7038], 13);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                minZoom: 10,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(refugeMap);
+            
+            // Marcadores de refugios (ejemplo)
+            const refugios = [
+                {coords: [40.4168, -3.7038], name: "Estación Sol", type: "metro", capacity: "Alta"},
+                {coords: [40.4315, -3.6896], name: "Hospital Gregorio Marañón", type: "hospital", capacity: "Media"},
+                {coords: [40.4075, -3.6933], name: "Estación Méndez Álvaro", type: "metro", capacity: "Alta"},
+                {coords: [40.4345, -3.6729], name: "Parque El Retiro - Búnker", type: "bunker", capacity: "Baja"},
+                {coords: [40.3925, -3.6984], name: "Centro Cultural Casa de Campo", type: "refugio", capacity: "Media"}
+            ];
+            
+            refugios.forEach(refugio => {
+                const icon = L.divIcon({
+                    className: `map-marker ${refugio.type}`,
+                    html: `<span style="font-size: 1.5rem;">${
+                        refugio.type === 'metro' ? '🚇' : 
+                        refugio.type === 'hospital' ? '🏥' : 
+                        refugio.type === 'bunker' ? '🛡️' : '🏠'
+                    }</span>`,
+                    iconSize: [32, 32]
+                });
+                
+                L.marker(refugio.coords, {icon}).addTo(refugeMap)
+                    .bindPopup(`
+                        <b>${refugio.name}</b><br>
+                        Tipo: ${refugio.type === 'metro' ? 'Estación de metro' : 
+                               refugio.type === 'hospital' ? 'Hospital' : 
+                               refugio.type === 'bunker' ? 'Búnker' : 'Refugio civil'}<br>
+                        Capacidad: ${refugio.capacity}<br>
+                        ${refugio.type === 'hospital' ? 'Servicios médicos disponibles' : 'Agua y saneamiento básico'}
+                    `);
+            });
+            
+            // Mapa de zonas peligro (ejemplo)
+            dangerMap = L.map('danger-map', {
+                preferCanvas: true,
+                zoomControl: false
+            }).setView([40.4168, -3.7038], 13);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                minZoom: 10,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(dangerMap);
+            
+            // Zonas de peligro simuladas
+            L.circle([40.42, -3.71], {
+                color: '#e74c3c',
+                fillColor: '#e74c3c',
+                fillOpacity: 0.2,
+                radius: 800
+            }).addTo(dangerMap).bindPopup("<b>Zona de alto riesgo</b><br>Bombardeos recientes");
+            
+            L.circle([40.40, -3.68], {
+                color: '#f39c12',
+                fillColor: '#f39c12',
+                fillOpacity: 0.2,
+                radius: 600
+            }).addTo(dangerMap).bindPopup("<b>Zona de riesgo medio</b><br>Combates urbanos reportados");
+            
+            L.circle([40.45, -3.65], {
+                color: '#2ecc71',
+                fillColor: '#2ecc71',
+                fillOpacity: 0.2,
+                radius: 1000
+            }).addTo(dangerMap).bindPopup("<b>Zona segura</b><br>Bajo control gubernamental");
+            
+            // Mapa de recursos
+            resourcesMap = L.map('resources-map', {
+                preferCanvas: true,
+                zoomControl: false
+            }).setView([40.4168, -3.7038], 13);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                minZoom: 10,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(resourcesMap);
+            
+            // Recursos (ejemplo)
+            const recursos = [
+                {coords: [40.418, -3.700], name: "Almacén Alimentos", type: "food"},
+                {coords: [40.425, -3.690], name: "Pozo de Agua", type: "water"},
+                {coords: [40.410, -3.695], name: "Farmacia Central", type: "medicine"},
+                {coords: [40.430, -3.680], name: "Taller Mecánico", type: "tools"}
+            ];
+            
+            recursos.forEach(recurso => {
+                const icon = L.divIcon({
+                    className: `map-marker ${recurso.type}`,
+                    html: `<span style="font-size: 1.5rem;">${
+                        recurso.type === 'food' ? '🍞' : 
+                        recurso.type === 'water' ? '🚰' : 
+                        recurso.type === 'medicine' ? '💊' : '🛠️'
+                    }</span>`,
+                    iconSize: [32, 32]
+                });
+                
+                L.marker(recurso.coords, {icon}).addTo(resourcesMap)
+                    .bindPopup(`<b>${recurso.name}</b><br>Recurso: ${
+                        recurso.type === 'food' ? 'Alimentos no perecederos' : 
+                        recurso.type === 'water' ? 'Fuente de agua potable' : 
+                        recurso.type === 'medicine' ? 'Suministros médicos' : 'Herramientas y reparaciones'
+                    }`);
+            });
+            
+            // Mapa de evacuación
+            evacuationMap = L.map('evacuation-map', {
+                preferCanvas: true,
+                zoomControl: false
+            }).setView([40.4168, -3.7038], 13);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                minZoom: 10,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(evacuationMap);
+            
+            // Rutas de evacuación (ejemplo)
+            const evacuationRoutes = [
+                {
+                    name: "Ruta Norte",
+                    coordinates: [[40.42, -3.70], [40.43, -3.69], [40.44, -3.68]],
+                    color: "#3498db"
+                },
+                {
+                    name: "Ruta Sur",
+                    coordinates: [[40.41, -3.71], [40.40, -3.72], [40.39, -3.73]],
+                    color: "#e74c3c"
+                },
+                {
+                    name: "Ruta Este",
+                    coordinates: [[40.42, -3.69], [40.42, -3.67], [40.42, -3.65]],
+                    color: "#2ecc71"
+                }
+            ];
+            
+            evacuationRoutes.forEach(route => {
+                L.polyline(route.coordinates, {
+                    color: route.color,
+                    weight: 5,
+                    opacity: 0.7,
+                    dashArray: '10, 10'
+                }).addTo(evacuationMap).bindPopup(`<b>${route.name}</b><br>Ruta segura de evacuación`);
+                
+                // Añadir marcadores de inicio/fin
+                L.marker(route.coordinates[0], {
+                    icon: L.divIcon({
+                        html: '<span style="font-size: 1.2rem;">🚩</span>',
+                        iconSize: [24, 24]
+                    })
+                }).addTo(evacuationMap).bindPopup(`<b>Inicio</b><br>${route.name}`);
+                
+                L.marker(route.coordinates[route.coordinates.length - 1], {
+                    icon: L.divIcon({
+                        html: '<span style="font-size: 1.2rem;">🏁</span>',
+                        iconSize: [24, 24]
+                    })
+                }).addTo(evacuationMap).bindPopup(`<b>Destino</b><br>${route.name}`);
+            });
+        }
+
+        // Cerrar modal
+        function closeModal() {
+            document.getElementById('war-modal').classList.remove('show');
+            document.body.style.overflow = 'auto';
+            
+            // Limpiar botón de favorito del modal
+            const existingBtn = document.querySelector('.modal-content .favorite-btn');
+            if (existingBtn) {
+                existingBtn.remove();
+            }
+        }
+    </script>
+</body>
+</html>
